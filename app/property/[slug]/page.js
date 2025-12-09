@@ -1,3 +1,7 @@
+// app/property/[slug]/page.jsx
+
+export const dynamic = "force-dynamic";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Related from "./related-products";
@@ -7,8 +11,18 @@ import "./property.css";
 import imglogo from "../../../public/images/logo/Door-Logo-1-768x768.png";
 import Lightbox from "./Lightbox";
 
-export default async function PropertyDetail({ params }) {
-  const { slug } = params;
+export default async function PropertyDetail(context) {
+  const params = await context.params;
+  const slug = params?.slug;
+
+  if (!slug || typeof slug !== "string") {
+    return (
+      <div style={{ padding: 40 }}>
+        <h1 style={{ color: "red", fontSize: 26 }}>Property Not Found</h1>
+        <p>Slug is missing or invalid.</p>
+      </div>
+    );
+  }
 
   /* MAIN PROPERTY API */
   const apiURL = `https://techzenondev.com/apnatai/api/property/${slug}`;
@@ -29,11 +43,10 @@ export default async function PropertyDetail({ params }) {
   const bannerTitle = slug.replace(/-/g, " ");
 
   /* SLUG LAST DIGIT */
-  const lastDigit = slug?.slice(-1);
+  const lastDigit = slug.slice(-1);
 
   /* RELATED API */
   const relatedURL = `https://techzenondev.com/apnatai/api/properties/slug/${lastDigit}/related`;
-
   const relatedRes = await fetch(relatedURL, { cache: "no-store" });
   const relatedJson = await relatedRes.json();
   const related = relatedJson?.data || [];
@@ -114,7 +127,8 @@ export default async function PropertyDetail({ params }) {
                 color: "#444",
               }}
             >
-              From ฿{Number(data?.min_price || 0).toLocaleString("en-US")} Per Month
+              From ฿{Number(data?.min_price || 0).toLocaleString("en-US")} Per
+              Month
             </p>
           </div>
 
@@ -136,8 +150,10 @@ export default async function PropertyDetail({ params }) {
       </div>
 
       {/* MAIN CONTENT */}
-      <div style={{ padding: "40px 20px", maxWidth: 1200, margin: "auto" }} className="rh_content">
-
+      <div
+        style={{ padding: "40px 20px", maxWidth: 1200, margin: "auto" }}
+        className="rh_content"
+      >
         <h2 style={{ fontSize: "26px", fontWeight: 600, marginBottom: "15px" }}>
           {data.title}
         </h2>
@@ -165,26 +181,46 @@ export default async function PropertyDetail({ params }) {
             fontSize: 16,
           }}
         >
-          <p><b>Property ID:</b> {data.property_id}</p>
-          <p><b>Location:</b> {data.location?.name}</p>
-          <p><b>Type:</b> {data.type?.name}</p>
-          <p><b>Status:</b> {data.status_type?.name}</p>
-          <p><b>Minimum Price:</b> ฿{Number(data.min_price).toLocaleString("en-US")}</p>
+          <p>
+            <b>Property ID:</b> {data.property_id}
+          </p>
+          <p>
+            <b>Location:</b> {data.location?.name}
+          </p>
+          <p>
+            <b>Type:</b> {data.type?.name}
+          </p>
+          <p>
+            <b>Status:</b> {data.status_type?.name}
+          </p>
+          <p>
+            <b>Minimum Price:</b> ฿
+            {Number(data.min_price).toLocaleString("en-US")}
+          </p>
         </div>
 
         {/* DESCRIPTION */}
         {data.description && (
           <>
-            <h3 style={{ marginTop: 35, fontSize: 22, fontWeight: 600 }}>Description</h3>
+            <h3 style={{ marginTop: 35, fontSize: 22, fontWeight: 600 }}>
+              Description
+            </h3>
             <p
-              style={{ marginTop: 10, fontSize: 16, lineHeight: 1.7, color: "#444" }}
+              style={{
+                marginTop: 10,
+                fontSize: 16,
+                lineHeight: 1.7,
+                color: "#444",
+              }}
               dangerouslySetInnerHTML={{ __html: data.description }}
             />
           </>
         )}
 
         {/* GALLERY */}
-        <h3 style={{ marginTop: 35, fontSize: 22, fontWeight: 600 }}>Gallery</h3>
+        <h3 style={{ marginTop: 35, fontSize: 22, fontWeight: 600 }}>
+          Gallery
+        </h3>
 
         <div
           style={{
@@ -201,7 +237,9 @@ export default async function PropertyDetail({ params }) {
         </div>
 
         {/* FEATURES */}
-        <h3 style={{ marginTop: 35, fontSize: 22, fontWeight: 600 }}>Features</h3>
+        <h3 style={{ marginTop: 35, fontSize: 22, fontWeight: 600 }}>
+          Features
+        </h3>
 
         <ul style={{ marginTop: 10, fontSize: 16, paddingLeft: 18 }}>
           {JSON.parse(data.features || "[]").map((feature, index) => (
@@ -212,7 +250,9 @@ export default async function PropertyDetail({ params }) {
         {/* FLOOR PLAN */}
         {data.floor_plan_image && (
           <>
-            <h3 style={{ marginTop: 35, fontSize: 22, fontWeight: 600 }}>Floor Plan</h3>
+            <h3 style={{ marginTop: 35, fontSize: 22, fontWeight: 600 }}>
+              Floor Plan
+            </h3>
             <img
               src={`https://techzenondev.com/apnatai/storage/app/public/${data.floor_plan_image}`}
               style={{ width: "100%", marginTop: 10, borderRadius: 10 }}
@@ -223,13 +263,19 @@ export default async function PropertyDetail({ params }) {
         {/* VIDEO */}
         {(data.video_url || data.video_file) && (
           <>
-            <h3 style={{ marginTop: 35, fontSize: 22, fontWeight: 600 }}>Property Video</h3>
+            <h3 style={{ marginTop: 35, fontSize: 22, fontWeight: 600 }}>
+              Property Video
+            </h3>
 
             {data.video_url && (
               <a
                 href={data.video_url}
                 target="_blank"
-                style={{ display: "inline-block", marginTop: 10, color: "#007bff" }}
+                style={{
+                  display: "inline-block",
+                  marginTop: 10,
+                  color: "#007bff",
+                }}
               >
                 Watch Video URL
               </a>
@@ -240,16 +286,20 @@ export default async function PropertyDetail({ params }) {
                 controls
                 style={{ marginTop: 15, width: "100%", borderRadius: 10 }}
               >
-                <source src={`https://techzenondev.com/apnatai/storage/app/public/${data.video_file}`} />
+                <source
+                  src={`https://techzenondev.com/apnatai/storage/app/public/${data.video_file}`}
+                />
               </video>
             )}
           </>
         )}
 
-        {/* MAP (EMBED WITHOUT API KEY) */}
+        {/* MAP */}
         {data.map_link && (
           <>
-            <h3 style={{ marginTop: 35, fontSize: 22, fontWeight: 600 }}>Map Location</h3>
+            <h3 style={{ marginTop: 35, fontSize: 22, fontWeight: 600 }}>
+              Map Location
+            </h3>
 
             <div style={{ marginTop: 15 }}>
               <iframe
@@ -260,7 +310,7 @@ export default async function PropertyDetail({ params }) {
                   width: "100%",
                   height: "400px",
                   border: 0,
-                  borderRadius: "10px"
+                  borderRadius: "10px",
                 }}
                 allowFullScreen=""
                 loading="lazy"
@@ -271,12 +321,23 @@ export default async function PropertyDetail({ params }) {
         )}
 
         {/* AGENT */}
-        <h3 style={{ marginTop: 40, fontSize: 22, fontWeight: 600 }}>Agent Details</h3>
+        <h3 style={{ marginTop: 40, fontSize: 22, fontWeight: 600 }}>
+          Agent Details
+        </h3>
 
-        <div style={{ display: "flex", gap: 20, marginTop: 10, alignItems: "center" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: 20,
+            marginTop: 10,
+            alignItems: "center",
+          }}
+        >
           <Image src={imglogo} alt="imglogo" width="100" height="100" />
           <div>
-            <p style={{ fontSize: 18, margin: 0, fontWeight: 600 }}>{data.agent?.title}</p>
+            <p style={{ fontSize: 18, margin: 0, fontWeight: 600 }}>
+              {data.agent?.title}
+            </p>
             <p style={{ marginTop: 5 }}>{data.agent?.short_description}</p>
           </div>
         </div>
@@ -317,11 +378,23 @@ export default async function PropertyDetail({ params }) {
                 >
                   <img
                     src={`https://techzenondev.com/apnatai/storage/app/public/${item.main_image}`}
-                    style={{ width: "100%", height: 170, objectFit: "cover" }}
+                    style={{
+                      width: "100%",
+                      height: 170,
+                      objectFit: "cover",
+                    }}
                   />
 
                   <div style={{ padding: 15 }}>
-                    <h4 style={{ fontSize: 18, marginBottom: 8, fontWeight: 600 }}>{item.title}</h4>
+                    <h4
+                      style={{
+                        fontSize: 18,
+                        marginBottom: 8,
+                        fontWeight: 600,
+                      }}
+                    >
+                      {item.title}
+                    </h4>
 
                     <p style={{ margin: 0, color: "#555" }}>
                       ฿ {Number(item.min_price).toLocaleString("en-US")}
