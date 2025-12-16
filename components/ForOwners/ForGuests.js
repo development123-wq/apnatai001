@@ -333,7 +333,7 @@ With roots in the real estate market since 2005, AP Natai combines traditional m
         {/* Right Text */}
         <div className="business-content">
           <h1>
-            Staff Sourcing & Service in Natai,{" "}<br/>
+            Staff Sourcing & Service in Natai,{" "}
             <span className="accent">  Phang-nga</span>
           </h1>
           <p className="description-custom">
