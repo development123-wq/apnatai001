@@ -1,30 +1,18 @@
-'use client';
-import "../../app/globals.css";
+import React from "react";
+import Image from "next/image";
+import aboutimg from "../../public/images/images/viva2.jpg";
+import "../../public/css/businessevents.css";
 
-
-import Image from 'next/image';
-import React from 'react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import InnerBanner from '../../components/InnerBanner';
-// import ForRentals from '../../components/ForRentals/ForRentals';
-import aboutimg from '../../public/images/images/viva.webp';
-import '../../public/css/forguests.css';
-
-const ForRental = () => {
+const BusinessEvents = () => {
   return (
-    <>
-    <Header/>
-    <InnerBanner/>
-    {/* <ForRentals/> */}
-     <section className="events-section">
+    <section className="events-section">
       <div className="events-header">
         <h1>
-          Seafront Villas for Rent in Natai,{" "}
+          List Rental Property in Natai,{" "}
           <span className="highlight"> Phang-nga</span> 
         </h1>
         <p className="description-custom">
-          Experience luxury at its finest as you explore properties for sale in Natai, Phang-nga. Every estate presented by AP Natai is a testament to elegance, luxury, and architectural prowess.
+        Listing your rental property in Natai, Phang-nga with AP Natai ensures it gets the spotlight it deserves. We amplify its appeal, ensuring it’s a top choice for potential renters.
         </p>
       </div>
 
@@ -60,15 +48,7 @@ const ForRental = () => {
         </div>
       </div>
     </section>
-
-
-
-
-
-
-    <Footer/>
-    </>
   );
 };
 
-export default ForRental;
+export default BusinessEvents;

@@ -80,7 +80,7 @@ export default function BrowseCatalog() {
         <title>Browse Catalog</title>
       </Head>
 
-      {/* FILTER + SORT */}
+      
       <section className="filterbytotal">
         <div className="filterbar-wrapper">
           <div className="filter-status-bar">
@@ -107,7 +107,7 @@ export default function BrowseCatalog() {
         </div>
       </section>
 
-      {/* MAIN PROPERTY LIST */}
+      
       <section className="catalog-section">
         <div className="left-column">
           <div className="card-grid">
@@ -121,7 +121,7 @@ export default function BrowseCatalog() {
                 <div className="catalog-card-content">
                   <h3>{item.title}</h3>
 
-                  {/* √ Normal Description (HTML removed) */}
+                  
                   <p className="catalog-desc">
                     {stripHtml(item.description).substring(0, 80)}...
                   </p>
@@ -149,7 +149,7 @@ export default function BrowseCatalog() {
             ))}
           </div>
 
-          {/* Pagination Buttons */}
+          
           <div className="pagination">
             {[...Array(totalPages)].map((_, i) => (
               <button
@@ -163,10 +163,9 @@ export default function BrowseCatalog() {
           </div>
         </div>
 
-        {/* RIGHT SIDEBAR */}
+        
         <div className="right-column">
           <h2>Agents List</h2>
-
           <div className="right-column-one">
             <Image
               src={imglogo}
@@ -196,6 +195,7 @@ export default function BrowseCatalog() {
           </div>
         </div>
       </section>
+      
     </>
   );
 }

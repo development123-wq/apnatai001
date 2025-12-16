@@ -7,7 +7,9 @@ import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import InnerBanner from '../../components/InnerBanner';
-import ForRentals from '../../components/ForRentals/ForRentals';
+import ForRentals from '../../components/ForOwners/ForGuests';
+import BusinessEvents from '../../components/OwnersBusinessEvents/BusinessEvents';
+import Card from "../../components/PropertyCardGuests";
 
 
 const ForRental = () => {
@@ -16,6 +18,8 @@ const ForRental = () => {
     <Header/>
     <InnerBanner/>
     <ForRentals/>
+    <BusinessEvents/>
+    <Card/>
 
 
 

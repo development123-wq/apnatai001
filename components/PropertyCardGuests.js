@@ -63,7 +63,7 @@ const PropertyCard = () => {
       </div>
 
       <div className="property-container custom-sec-two">
-        <div className="fancy-mainheading fancy-mainheading-two">
+        <div className="fancy-mainheading fancy-mainheading-two" style={{background:'none'}}>
           <h2 className="typing-text">Diversify Your <span>Real Estate Journey</span></h2>
         </div>
 

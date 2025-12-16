@@ -56,7 +56,7 @@ export default function AgentSlider() {
   return (
     <div className="agent-wrapper agent-wrapper-two">
       <div className="left-side">
-        <h3 className="main-title">Meet</h3>
+        <h3 className="main-title" style={{color:'#000'}}>Meet</h3>
         <h2 className="highlight-title">Our Agents</h2>
         <p className="sub-text" style={{color:'#000',lineHeight:'20px'}}>
           Connect with our expert agents, dedicated to guiding you with clarity, trust, and deep market knowledge. Experience seamless support from professionals who prioritize your goals.

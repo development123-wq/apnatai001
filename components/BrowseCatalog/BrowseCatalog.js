@@ -166,6 +166,7 @@ export default function BrowseCatalog() {
         {/* RIGHT SIDEBAR */}
         <div className="right-column">
           <h2>Agents List</h2>
+         
 
           <div className="right-column-one">
             <Image

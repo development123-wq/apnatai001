@@ -46,7 +46,7 @@ export default function PartnersSlider() {
   return (
     <div className="partners-section">
       <div className="fancy-mainheading">
-     <h2>Our <span>Partners</span></h2>
+     <h2 style={{marginBottom:'30px !important'}}>Our <span>Partners</span></h2>
      <p></p>
      </div>
       <Slider {...settings} className="partners-slider">

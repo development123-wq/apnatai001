@@ -38,7 +38,7 @@ export default function BlogSection() {
     <>
       <div className="blog-section">
         <div className="fancy-mainheading">
-          <h2>
+          <h2 style={{color:'#000'}}>
             Latest <span>Blog Posts</span>
           </h2>
         </div>

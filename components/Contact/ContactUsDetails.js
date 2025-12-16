@@ -7,7 +7,7 @@ const contactInfo = [
     id: 1,
     icon: "/images/images/p1.png", // Replace with your actual icon path
     title: "Phone",
-    text: "+66 81 979 9307",
+    text: "+66 (0) 98 021 8331",
     color: "#00e2ee"
   },
   {

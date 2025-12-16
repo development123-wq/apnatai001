@@ -101,7 +101,7 @@ const Footer = () => {
             <div className="reach-us-div">
               <h3>REACH US</h3>
               <ul>
-                <li style={{display:'flex'}}><FaPhoneAlt /><span style={{paddingLeft:'10px'}}>+66 81 979 9307</span></li>
+                <li style={{display:'flex'}}><FaPhoneAlt /><span style={{paddingLeft:'10px'}}>+66 (0) 98 021 8331</span></li>
                 <li style={{display:'flex'}}><FaEnvelope /><span style={{paddingLeft:'10px'}}>sales@ap-natai.com</span></li>
                 <li style={{display:'flex'}}><FaMapMarkerAlt /><span style={{paddingLeft:'10px'}}>23/3 Moo 5 T.Khokkloi A.Takuatung <br />Phang Nga 82140 Thailand</span></li>
               </ul>

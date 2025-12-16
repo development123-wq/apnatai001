@@ -140,3 +140,45 @@
 .description-custom{
   line-height: 25px;
 }
+
+.contentpart{
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+}
+.contentpart h4{
+  font-size:23px;
+}
+.contentpart p{
+  line-height:25px;
+  font-size:15px;
+  margin-top:10px;
+  color:#555;
+}
+
+
+.titleheadingowners {
+text-align: center;
+    font-size:30px; font-weight:300; color:#222; letter-spacing:1px;
+    text-transform: uppercase;
+    
+    width:fit-content !important;
+    margin:auto;
+    font-weight: 600;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.titleheadingowners:after,.titleheadingowners:before {
+    content: " ";
+    display: block;
+    border-bottom: 2px solid #00e2ee;
+    border-top: 2px solid #00e2ee;
+    height: 5px;
+    width:100px;
+  background-color:#ffffff;
+}

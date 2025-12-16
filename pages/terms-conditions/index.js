@@ -111,7 +111,7 @@ const About = () => {
           <br />
           <strong>Email:</strong> info@example.com
           <br />
-          <strong>Phone:</strong> +66 81 979 9307
+          <strong>Phone:</strong> +66 (0) 98 021 8331
           <br />
           <strong>Address:</strong> 23/3 Moo 5 T.Khokkloi A.Takuatung
 Phang Nga 82140 Thailand

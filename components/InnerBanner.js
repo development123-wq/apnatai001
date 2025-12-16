@@ -24,8 +24,8 @@ const InnerBanner = ({ title, buttonText = "Get a Consultant", buttonLink = "/co
     '/for-investors': 'For Investors',
     '/browse-catalog': 'Browse Catalog',
     '/contact': 'Contact Us',
-    '/for-rentals': 'For Rentals',
-    '/for-real-estates': 'For Real Estate',
+    '/for-rentals': 'For Rent',
+    '/for-real-estates': 'For Sale',
     '/news': 'News & Events',
     '/search-for-real-estate': 'Search For Realestate'
 

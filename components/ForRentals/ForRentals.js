@@ -135,7 +135,7 @@ export default function BrowseCatalog() {
 
                 <div className="catalog-card-footer">
                   <span className="catalog-price">
-                    ฿{formatPrice(item.min_price)}
+                    ฿{formatPrice(item.min_price)}<span style={{color:'#000'}}>/night</span>
                   </span>
 
                   <a
@@ -166,7 +166,30 @@ export default function BrowseCatalog() {
         {/* RIGHT SIDEBAR */}
         <div className="right-column">
           <h2>Agents List</h2>
-
+          
+<div style={{ display: 'flex', justifyContent: 'center',marginBottom:'20px' }}>
+<a
+  href="https://apnatai21.vercel.app/about-natai-phang-nga"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button
+    className="learn-more"
+    style={{
+      backgroundColor: '#00E2EE',
+      color: 'white',
+      fontWeight: 'normal',
+      padding: '10px 25px',
+      borderRadius: '0px',
+      fontSize: '16px',
+      border: 'none',
+      cursor: 'pointer',
+    }}
+  >
+    About Natai
+  </button>
+</a>
+</div>
           <div className="right-column-one">
             <Image
               src={imglogo}

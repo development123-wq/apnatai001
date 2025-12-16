@@ -99,8 +99,8 @@ const Header = () => {
       {/* Bottom Section */}
       <div className={styles.bottomBar}>
         <div className={styles.contactInfo}>
-          <a href="tel:+660990893516">
-            <FaPhoneAlt /> +66 (0) 99 089 3516
+          <a href="tel:+660980218331">
+            <FaPhoneAlt /> +66 (0) 98 021 8331
           </a>
           <a href="mailto:sales@ap-natai.com">
             <FaEnvelope /> sales@ap-natai.com
