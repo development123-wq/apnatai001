@@ -18,13 +18,15 @@ body {
 }
 body {
   color: var(--foreground);
-  background: var(--background);
+  /* background: var(--background); */
+  background-color: #fff;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 h1,h2,h3,h4,h5,h6,p,a{
   font-family: "Poppins", sans-serif !important;
+  
 
 }
 p{
@@ -50,12 +52,13 @@ a {
 .fancy-mainheading{
     width:100%;
     text-align:center;
-    margin-top:50px;
+    padding-top:50px;
     background-color: #fff;
 }
 .fancy-mainheading h2{
   font-size: 40px !important;;
   margin-bottom:0px !important;
+  color:#000;
 }
 .fancy-mainheading span{
   color:#00E2EE;
@@ -63,7 +66,8 @@ a {
 .loadmore-btn{
    width:100%;
     text-align:center;
-    margin-bottom:50px;
+    padding-bottom:50px;
+    background-color: #fff;
 }
 
 form button:hover{
@@ -126,6 +130,7 @@ form button:hover{
   }
   .service-section{
     padding:10px !important;
+    background-color: #fff;
   }
   .about-title{
     font-size: 25px !important;
@@ -370,4 +375,11 @@ font-size:10px;
 .form-box{
   margin:auto !important;
 }
+}
+
+
+.slick-slider.slick-initialized{
+  
+  margin:auto;
+  
 }

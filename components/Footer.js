@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import '../public/css/Footer.css';
+import logoimage from '../public/images/logo/logo1.png';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaTwitter, FaLinkedinIn, FaFacebookF } from 'react-icons/fa';
 
 const Footer = () => {
@@ -58,7 +60,8 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="footer-main">
           <div className="footer-left">
-            <img src="/images/logo/logo.png" alt="AP Natai" className="logoImage footerlogoImage" width="300px"/>
+            
+            <Image src={logoimage} alt="AP Natai" className="logoImage footerlogoImage" width="300px" height={70}/>
             <p className="logoText">
               At AP Natai, we understand the nuances of this idyllic region and are dedicated to providing bespoke services that cater to your discerning tastes.
             </p>

@@ -87,7 +87,7 @@ export default function AgentSlider() {
                   style={{objectFit:'cover'}}
                 />
                 <div>
-                  <h3 className="agent-name">{agent.title}</h3>
+                  <h3 className="agent-name" style={{color:'#000'}}>{agent.title}</h3>
                   <p className="agent-listings">{agent.short_description}</p>
                 </div>
               </div>

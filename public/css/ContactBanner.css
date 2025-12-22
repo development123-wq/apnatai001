@@ -10,7 +10,8 @@
   text-align: center;
 }
 .contact-hero-banner{
-  margin-top:50px;
+  /* margin-top:50px; */
+  background-color: #fff;
 }
 .contact-hero-banner h2{
   font-size:30px;

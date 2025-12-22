@@ -64,7 +64,7 @@
 
 .logoImage {
   width: 150px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .logoText {
@@ -172,7 +172,7 @@
   border-color: #00E2EE;
 }
 .footerlogoImage{
-  width:200px !important;
+  width:250px !important;
 }
 .tags a:hover{
   background:#00E2EE;

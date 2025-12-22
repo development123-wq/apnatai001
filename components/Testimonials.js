@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import axios from 'axios';
 
 export default function Testimonials() {
-  const [testimonials, setTestimonials] = useState([]); // ✅ start with an empty array
+  const [testimonials, setTestimonials] = useState([]); 
 
   useEffect(() => {
     const fetchTestimonials = async () => {
@@ -52,7 +52,7 @@ export default function Testimonials() {
   return (
     <div className="testimonials-wrapper">
       <div className="fancy-mainheading">
-        <h2>Happy Clients <span>Say About Us</span></h2>
+        <h2 style={{color:'#000 !important'}}>Happy Clients <span>Say About Us</span></h2>
       </div>
 
       {testimonials.length > 0 ? (
@@ -83,7 +83,7 @@ export default function Testimonials() {
                   dangerouslySetInnerHTML={{ __html: item.review || '' }}
                 />
                 <div className="testimonial-footer">
-                  <h3>{item.name || 'Anonymous'}</h3>
+                  <h3 style={{color:'#000'}}>{item.name || 'Anonymous'}</h3>
                   <p style={{color:'#000',lineHeight:'20px'}}>{item.position || 'Happy Customer'}</p>
                   <div className="quote-icon">❞</div>
                 </div>

@@ -125,7 +125,8 @@ const PropertyCard = () => {
 
               <div className="property-footer">
                 <div>
-                  <p className="price">฿{price}</p>
+                  <p className="price">฿{Number(price).toLocaleString()}</p>
+                 
                 </div>
 
                 <button

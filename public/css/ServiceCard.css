@@ -1,7 +1,8 @@
 .service-section {
-  padding: 60px 0;
+  padding-bottom:60px;
   padding-top:0px !important;
   text-align: center;
+  background-color: #fff;
 }
 
 .fancy-mainheading h2 {
@@ -95,7 +96,8 @@
 
 }
 .service-container{
-  margin-top:30px;
+  padding-top:30px;
+  background-color: #fff;
 }
 .service-icon-box img{
   filter: brightness(1);

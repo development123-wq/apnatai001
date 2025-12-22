@@ -46,7 +46,8 @@ const About = () => {
           maxWidth: "1000px",
           margin: "60px auto",
           padding: "20px",
-          fontFamily: "Arial, sans-serif"
+          fontFamily: "Arial, sans-serif",
+          color:'#000'
         }}
       >
         <h2

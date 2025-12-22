@@ -173,6 +173,6 @@ grid-template-columns: repeat(3, 1fr);
 }
 .right-column-custom{
   width:100%;
-  max-width:1200px;
   margin:auto;
+  background-color: #f4f4f4;
 }

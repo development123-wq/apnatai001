@@ -32,6 +32,7 @@ export default function AgentsList() {
         gap: "30px",
         justifyContent: "center",
         padding: "20px",
+        backgroundColor: "#fff"
       }}
     >
       {agents.map((agent) => (
@@ -76,6 +77,7 @@ export default function AgentsList() {
                   margin: "0",
                   fontSize: "22px",
                   fontWeight: "700",
+                  color:"#000"
                 }}
               >
                 {agent.title}

@@ -166,9 +166,19 @@ const Banner = () => {
             <select>
               <option>Villa</option>
             </select>
+            <div class="date-row">
+           <div class="date-row">
+  <div class="date-field">
+    <label>Check-in Date</label>
+    <input type="date" value="2025-09-15" />
+  </div>
 
-            <label>Booking Dates</label>
-            <input type="date" defaultValue="2025-09-15" />
+  <div class="date-field">
+    <label>Check-out Date</label>
+    <input type="date" value="2025-09-15" />
+  </div>
+</div>
+            </div>
 
             <label>Number Of Guests</label>
             <select>
